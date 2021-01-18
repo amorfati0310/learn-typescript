@@ -1,7 +1,17 @@
-let todoItems;
+// no Implicty Any 고치기 
+// 
+interface TodoItem {
+  id: number;
+  title: string;
+  done: boolean;
+}
+let todoItems: Array<TodoItem>;
+
+
+
 
 // api
-function fetchTodoItems() {
+function fetchTodoItems():Array<TodoItem> {
   const todos = [
     { id: 1, title: '안녕', done: false },
     { id: 2, title: '타입', done: false },
@@ -16,15 +26,15 @@ function fetchTodos() {
   return todos;
 }
 
-function addTodo(todo) {
+function addTodo(todo: TodoItem) {
   todoItems.push(todo);
 }
 
-function deleteTodo(index) {
+function deleteTodo(index: number) {
   todoItems.splice(index, 1);
 }
 
-function completeTodo(index, todo) {
+function completeTodo(index: number, todo: TodoItem) {
   todo.done = true;
   todoItems.splice(index, 1, todo);
 }
