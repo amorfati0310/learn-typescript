@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    // "checkJs": false,  // js 같이 쓰게 된다면 jsdoc에서 에러 체크하는 것 처럼 사용 
+    // tsc init 아래 폴더 옵션들 및 주석으로 살펴보기 
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strict": true,
+  }
+}
